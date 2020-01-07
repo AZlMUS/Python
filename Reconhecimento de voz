@@ -1,0 +1,56 @@
+# -*- coding: latin-1 -*-
+
+import speech_recognition as sr
+import pyautogui
+import time
+line = 1
+sr.__version__
+
+x=0
+
+while 1==1:	
+	r = sr.Recognizer()
+	with sr.Microphone() as source:
+		print("Q q tu qué parcero")
+		audio = r.listen(source) 
+		r.dynamic_energy_threshold = True  
+		
+	while 1==1:
+		try:
+			print("Tu falo isso ai ó: " + (r.recognize_google(audio,language="pt-BR")))
+			comando= str(r.recognize_google(audio,language="pt-BR"))
+
+		
+			if comando == str("protocolo 1"):
+				pyautogui.hotkey("win","r")
+				time.sleep(1.5)
+				pyautogui.write("chrome")
+				pyautogui.press("enter")
+				time.sleep(1.5)
+				pyautogui.hotkey("ctrl","shfit","n")
+				pyautogui.write("xvideos.com")
+				pyautogui.press("enter")
+				break
+			if comando == str("Google"):
+				pyautogui.hotkey("win","r")
+				pyautogui.write("chrome")
+				pyautogui.press("enter")
+				break
+			if comando == str("calculadora") :
+				pyautogui.hotkey("win","r")
+				pyautogui.write("calc")
+				pyautogui.press("enter")
+				break
+			if comando == str("desligar") :
+				pyautogui.press("win")
+				pyautogui.press("right")
+				pyautogui.press("enter")
+				break
+			else:
+				break
+	
+		except sr.UnknownValueError:
+			print("legal viado, NUM ENTENDI NADA KKKKKJ")
+			break
+		except sr.RequestError as e:
+			print("Could not request results from Google Speech Recognition service; {0}".format(e)) 
