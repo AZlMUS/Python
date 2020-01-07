@@ -11,7 +11,7 @@ x=0
 while 1==1:	
 	r = sr.Recognizer()
 	with sr.Microphone() as source:
-		print("Q q tu qué parcero")
+		print("Estou te ouvindo")
 		audio = r.listen(source) 
 		r.dynamic_energy_threshold = True  
 		
@@ -50,7 +50,7 @@ while 1==1:
 				break
 	
 		except sr.UnknownValueError:
-			print("legal viado, NUM ENTENDI NADA KKKKKJ")
+			print("legal, NÃO ENTENDI NADA KKKKKJ")
 			break
 		except sr.RequestError as e:
 			print("Could not request results from Google Speech Recognition service; {0}".format(e)) 
