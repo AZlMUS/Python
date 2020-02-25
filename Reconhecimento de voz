@@ -1,4 +1,5 @@
 # -*- coding: latin-1 -*-
+# Trata-se de um prototipo. Sua finalidade de criar um assistente customizavel utilizando reconhecimento de voz e automação
 
 import speech_recognition as sr
 import pyautogui
