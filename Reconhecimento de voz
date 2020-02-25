@@ -22,7 +22,7 @@ while 1==1:
 			comando= str(r.recognize_google(audio,language="pt-BR"))
 
 		
-			if comando == str("protocolo 1"):
+			if comando == str("Videos"):
 				pyautogui.hotkey("win","r")
 				time.sleep(1.5)
 				pyautogui.write("chrome")
